@@ -75,14 +75,18 @@ const firstColumn = testimonials.slice(0,3);
 const secondColumn = testimonials.slice(3,6);
 const thirdColumn = testimonials.slice(6,9);
 
-const TestimonialsColumn = (props: {className?: string; testimonials: typeof testimonials }) => (
+const TestimonialsColumn = (props: {
+  className?: string;
+  testimonials: typeof testimonials;
+  duration?: number;
+}) => (
   <div className={props.className}>
     <motion.div animate={{
       translateY: "-50%",
 
     }}
     transition={{
-      duration: 10,
+      duration: props.duration,
       repeat : Infinity,
       ease: 'linear',
       repeatType: 'loop',
@@ -94,7 +98,12 @@ const TestimonialsColumn = (props: {className?: string; testimonials: typeof tes
           <div className="card" key={username}>
             <div className="">{text}</div>
             <div className="flex items-center gap-2 mt-5">
-              <Image src={imageSrc} alt={name} width={40} height={40} className="h-10 w-10 rounded-full"/>
+              <Image
+                src={imageSrc}
+                alt={name}
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full"/>
               <div className="flex flex-col">
                 <div className="font-medium tracking-tight leading-5">{name}</div>
                 <div className="leading-5 tracking-tight">{username}</div>
@@ -122,9 +131,9 @@ export const Testimonials = () => {
           </p>
         </div>
         <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_74%,transparent)]">
-          <TestimonialsColumn testimonials={firstColumn}/>
-          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block"/>
-          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block"/>
+          <TestimonialsColumn testimonials={firstColumn} duration={15}/>
+          <TestimonialsColumn testimonials={secondColumn} duration={17} className="hidden md:block"/>
+          <TestimonialsColumn testimonials={thirdColumn} duration={19} className="hidden lg:block"/>
         </div>
       </div>
     </section>
