@@ -10,7 +10,7 @@ import { useRef } from "react";
 export const CallToAction = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: null,
+    target: sectionRef,
     offset: ['start end', 'end start']
   });
   const translateY = useTransform(scrollYProgress, [0,1], [150, -150]);
