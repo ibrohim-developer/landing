@@ -6,17 +6,19 @@ import { Pricing } from './../sections/Pricing';
 import { Testimonials } from './../sections/Testimonials';
 import { CallToAction } from './../sections/CallToAction';
 import { Footer } from './../sections/Footer';
+import RegistrationForm from "@/sections/Form";
 
 export default function Home() {
   return(
     <>
       <Header />
       <Hero />
-      <LogoTicker />
+      {/* <LogoTicker /> */}
       <ProductShowcase />
       <Pricing />
       <Testimonials />
-      <CallToAction />
+      <RegistrationForm />
+      {/* <CallToAction /> */}
       <Footer />
     </>
   );

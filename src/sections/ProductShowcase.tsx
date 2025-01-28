@@ -19,14 +19,13 @@ export const ProductShowcase = () => {
         <div className="container">
           <div className="section-heading">
             <div className="flex justify-center">
-              <div className="tag">Boost your productivity</div>
             </div>
-            <h2 className='section-title mt-5'>A more effective way to track progress</h2>
-            <p className='section-desc mt-5'>Effortlessly turn your ideas into a fully functional, responsive, SaaS website in just minutes with this template.</p>
+            <h2 className='section-title mt-5'>Dasturlashni qulay sharoitda online o`rganing</h2>
+            <p className='section-desc mt-5'></p>
           </div>
-
             <div className="relative">
-              <Image src={productImage} alt='Product Image' className='mt-10'/>
+              <p className='absolute right-[50%] translate-x-[50%] top-[50%] translate-y-[-50%] z-10 section-title'>Tez kunda...</p>
+              <Image src={productImage} alt='Product Image' className='mt-10 blur-sm'/>
               <motion.img
                 src={pyramidImage.src}
                 alt='Pyramid Image'
